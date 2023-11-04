@@ -1,0 +1,75 @@
+﻿
+<p>
+   Button Oluştur
+</p>
+
+<div class="myclass"></div>
+
+<input type="text" id="txtId"/>
+
+<input type="button" value="Dene"/>
+
+
+<input type="button" value="Dene" /><br />
+<input type="button" value="Dene" /><br />
+<input type="button" value="Dene" /><br />
+<input type="button" value="Dene" /><br />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+
+    // döküman yüklendiğinde çalışacaktır. JQuery kodunun yazılması için önemlidir.
+
+    $(document).ready(function () {
+    
+        
+        // Selector  :button  tüm input type buttonları kapsar
+        $(":button").click(function () { 
+        
+        
+            $("#txtId").val("Butona tıklanıldı");
+        
+        
+        });
+
+
+        
+        $(":button").click(function () {
+
+
+            $(this).hide();
+
+
+        });
+
+        $(":button").mouseenter(function () {
+
+
+            $(this).hide();
+
+
+        });
+
+        // p sadece p elementini yakalar
+        $("p").mouseenter(function () {
+
+
+
+            // .myclass css selector'dür, 
+            $(".myclass").append("<input type='button' value='Dene' />");
+
+
+        });
+
+        
+
+
+        //alert("yüklendi");
+    
+    
+    });
+ 
+</script>
